@@ -1,0 +1,85 @@
+{
+  "name": "@eutobias/serenojs",
+  "version": "0.1.0",
+  "description": "SerenoJS \u2014 schema-driven CMS for Waku: auto-generated admin SPA + Hono REST API.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Tobias Taurian <eutobias@gmail.com>",
+  "homepage": "https://github.com/eutobias/my-mini-cms#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eutobias/my-mini-cms.git",
+    "directory": "packages/serenojs"
+  },
+  "bugs": {
+    "url": "https://github.com/eutobias/my-mini-cms/issues"
+  },
+  "keywords": [
+    "cms",
+    "headless-cms",
+    "waku",
+    "react",
+    "react-server-components",
+    "rsc",
+    "hono",
+    "sqlite",
+    "admin-panel",
+    "schema-driven",
+    "typescript"
+  ],
+  "sideEffects": false,
+  "main": "./dist/config.js",
+  "module": "./dist/config.js",
+  "types": "./dist/config.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/config.d.ts",
+      "default": "./dist/config.js"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "default": "./dist/config.js"
+    },
+    "./runtime": {
+      "types": "./dist/runtime.d.ts",
+      "default": "./dist/runtime.js"
+    },
+    "./server": {
+      "types": "./dist/server/app.d.ts",
+      "default": "./dist/server/app.js"
+    },
+    "./ui": {
+      "types": "./dist/ui/index.d.ts",
+      "default": "./dist/ui/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "admin-dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.15"
+  },
+  "peerDependencies": {
+    "react": "~19.3.0",
+    "react-dom": "~19.3.0",
+    "waku": "1.0.0-rc.1"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "build:admin": "vite build --config vite.admin.config.ts",
+    "test": "tsc -p tsconfig.build.json && node --test tests/*.test.mjs",
+    "test:coverage": "tsc -p tsconfig.build.json && node --test --experimental-test-coverage tests/*.test.mjs",
+    "prepack": "pnpm run build:admin && tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "hono": "^4.12.14",
+    "react-icons": "^5.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

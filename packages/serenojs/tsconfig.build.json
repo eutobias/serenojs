@@ -1,0 +1,28 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "outDir": "dist",
+    "rootDir": "src",
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src/config.ts",
+    "src/runtime.ts",
+    "src/locale.ts",
+    "src/global.d.ts",
+    "src/core/**/*.ts",
+    "src/auth/**/*.ts",
+    "src/server/**/*.ts",
+    "src/ui/**/*.ts",
+    "src/ui/**/*.tsx"
+  ],
+  "exclude": [
+    "src/admin"
+  ]
+}
