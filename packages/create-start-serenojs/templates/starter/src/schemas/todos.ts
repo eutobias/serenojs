@@ -4,7 +4,7 @@ export const todos: CollectionDef = {
   slug: "todos",
   label: "To Dos",
   icon: "box",
-  description: "Lista de tarefas de exemplo.",
+  description: "Example task list.",
   access: { read: "public", create: "public", update: "public", delete: "public" },
   list: ["id", "title", "priority", "done", "dueDate", "createdAt"],
   fields: [

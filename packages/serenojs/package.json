@@ -5,14 +5,14 @@
   "type": "module",
   "license": "MIT",
   "author": "Tobias Taurian <eutobias@gmail.com>",
-  "homepage": "https://github.com/eutobias/my-mini-cms#readme",
+  "homepage": "https://github.com/eutobias/serenojs#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eutobias/my-mini-cms.git",
+    "url": "git+https://github.com/eutobias/serenojs.git",
     "directory": "packages/serenojs"
   },
   "bugs": {
-    "url": "https://github.com/eutobias/my-mini-cms/issues"
+    "url": "https://github.com/eutobias/serenojs/issues"
   },
   "keywords": [
     "cms",

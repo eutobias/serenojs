@@ -56,14 +56,54 @@ consumed by any frontend.
 
 Peer dependencies: `waku`, `react`, `react-dom`.
 
-## Install
+## Getting started
+
+### Create a new project (recommended)
+
+The fastest way to start is the official starter. It generates a Waku app with
+the admin panel, REST API, auth, media, backups, SQLite configuration, a small
+todos example app and agent skills already wired up.
+
+```sh
+npm create start-serenojs@latest my-app
+# or
+pnpm create start-serenojs my-app
+# or
+yarn create start-serenojs my-app
+# or
+bun create start-serenojs my-app
+```
+
+The CLI prompts for the directory and asks whether to install dependencies and
+initialize a git repository. For automation it accepts `--yes`, `--no-install`,
+`--no-git` and `--pm <pnpm|npm|yarn|bun>`. See the
+[`create-start-serenojs`](https://github.com/eutobias/serenojs/tree/main/packages/create-start-serenojs)
+package for the full option list.
+
+Then start the app:
+
+```sh
+cd my-app
+pnpm dev
+```
+
+Open <http://localhost:3000/admin> and sign in with `admin@example.com` /
+`admin123`. The example app is at <http://localhost:3000>.
+
+The generated project points at the published `@eutobias/serenojs` range, so
+there is nothing else to install manually.
+
+### Add to an existing project (manual)
+
+If you already have a Waku app and want to add the CMS yourself:
 
 ```sh
 pnpm add @eutobias/serenojs
 ```
 
 The package is ESM-only and ships compiled `dist/` plus the prebuilt
-`admin-dist/` SPA.
+`admin-dist/` SPA. Continue with the [Setup](#setup) steps below to create
+`serenojs.config.ts` and mount the middleware.
 
 ## Setup
 

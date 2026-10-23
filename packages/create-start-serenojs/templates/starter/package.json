@@ -1,0 +1,33 @@
+{
+  "name": "serenojs-starter",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.15",
+    "bun": ">=1.4.3"
+  },
+  "scripts": {
+    "dev": "waku dev",
+    "build": "waku build",
+    "start": "waku start",
+    "typegen": "waku router typegen"
+  },
+  "dependencies": {
+    "@eutobias/serenojs": "workspace:^0.1.0",
+    "hono": "^4.12.14",
+    "react": "~19.3.0",
+    "react-dom": "~19.3.0",
+    "react-server-dom-webpack": "~19.3.0",
+    "waku": "1.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@rolldown/plugin-babel": "^0.2.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.0"
+  }
+}

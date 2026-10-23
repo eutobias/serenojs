@@ -1,0 +1,9 @@
+.data
+dist
+node_modules
+public/files
+*.tsbuildinfo
+.waku
+__data
+__public
+.env*

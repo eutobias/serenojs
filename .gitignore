@@ -9,3 +9,5 @@ public/files
 *.pem
 
 packages/serenojs/admin-dist
+packages/create-start-serenojs/templates/starter/.data
+packages/create-start-serenojs/templates/starter/public/files

@@ -1,5 +1,5 @@
 {
-  "name": "serenojs-starter",
+  "name": "serenojs-workspace",
   "version": "0.0.0",
   "type": "module",
   "private": true,
@@ -8,25 +8,17 @@
     "bun": ">=1.4.3"
   },
   "scripts": {
-    "dev": "pnpm build:package && pnpm build:admin && waku dev",
-    "build": "pnpm build:package && pnpm build:admin && waku build",
-    "start": "waku start",
-    "typegen": "waku router typegen",
+    "dev": "pnpm build:package && pnpm build:admin && pnpm --filter serenojs-starter dev",
+    "build": "pnpm build:package && pnpm build:admin && pnpm --filter serenojs-starter build",
+    "start": "pnpm --filter serenojs-starter start",
+    "typegen": "pnpm --filter serenojs-starter typegen",
     "build:admin": "vite build --config packages/serenojs/vite.admin.config.ts",
     "build:package": "pnpm --filter @eutobias/serenojs build",
+    "build:create": "pnpm --filter create-start-serenojs build",
     "test": "pnpm build:admin && pnpm --filter @eutobias/serenojs test",
     "test:coverage": "pnpm build:admin && pnpm --filter @eutobias/serenojs test:coverage",
     "pack:package": "pnpm build:package && pnpm build:admin && pnpm --filter @eutobias/serenojs pack",
     "publish:package": "pnpm build:package && pnpm build:admin && pnpm --filter @eutobias/serenojs publish"
-  },
-  "dependencies": {
-    "hono": "^4.12.14",
-    "react": "~19.3.0",
-    "react-dom": "~19.3.0",
-    "react-icons": "^5.7.0",
-    "react-server-dom-webpack": "~19.3.0",
-    "waku": "1.0.0-rc.1",
-    "@eutobias/serenojs": "workspace:*"
   },
   "devDependencies": {
     "@rolldown/plugin-babel": "^0.2.3",

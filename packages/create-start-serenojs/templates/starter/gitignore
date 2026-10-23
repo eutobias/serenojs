@@ -1,0 +1,11 @@
+node_modules
+dist
+.env*
+.data
+public/files
+*.tsbuildinfo
+.cache
+.DS_Store
+*.pem
+
+packages/serenojs/admin-dist

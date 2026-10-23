@@ -1,0 +1,53 @@
+{
+  "name": "create-start-serenojs",
+  "version": "0.1.0",
+  "description": "Scaffold a SerenoJS starter (Waku + @eutobias/serenojs).",
+  "type": "module",
+  "license": "MIT",
+  "author": "Tobias Taurian <eutobias@gmail.com>",
+  "homepage": "https://github.com/eutobias/serenojs#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eutobias/serenojs.git",
+    "directory": "packages/create-start-serenojs"
+  },
+  "bugs": {
+    "url": "https://github.com/eutobias/serenojs/issues"
+  },
+  "keywords": [
+    "serenojs",
+    "cms",
+    "waku",
+    "starter",
+    "scaffold",
+    "create"
+  ],
+  "bin": {
+    "create-start-serenojs": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.15"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "pnpm run build && node --test tests/*.test.mjs",
+    "prepack": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.8.1",
+    "picocolors": "^1.1.1"
+  }
+}

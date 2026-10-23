@@ -18,15 +18,5 @@
         "./src/*"
       ]
     }
-  },
-  "include": [
-    "src",
-    "serenojs.config.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "__data",
-    "__public"
-  ]
+  }
 }
